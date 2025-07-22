@@ -1,0 +1,29 @@
+network:
+    version: 2
+    ethernets:
+        enp3s0:
+            addresses:
+              - 192.168.100.50/24
+            nameservers:
+                addresses:
+                  - 1.1.1.1
+                  - 8.8.8.8
+                search: []
+            routes:
+              - to: default
+                via: 192.168.100.1
+    wifis:
+        wlp2s0:
+            dhcp4: no
+            addresses:
+              - 192.168.200.50/24
+            nameservers:
+                addresses:
+                  - 1.1.1.1
+                  - 8.8.8.8
+            routes:
+              - to: 10.50.161.186
+                via: 192.168.200.1
+            access-points:
+                "":
+                    password: ""
